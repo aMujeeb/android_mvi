@@ -1,4 +1,4 @@
-package com.mujapps.mvisample.modal
+package com.mujapps.mvisample.data.models
 
 data class NewsArticle(
     val author: String?,

@@ -1,6 +1,6 @@
 package com.mujapps.mvisample.data.service
 
-import com.mujapps.mvisample.modal.NewsSourceBaseResponse
+import com.mujapps.mvisample.data.models.NewsSourceBaseResponse
 import com.mujapps.mvisample.utils.MviAppConstants
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
