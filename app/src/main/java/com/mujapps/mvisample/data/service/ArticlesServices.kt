@@ -13,7 +13,7 @@ class ArticlesServices(private val mHttpClient: HttpClient) {
     suspend fun fetchTopHeadLines(source : String, apiKey : String) : NewsSourceBaseResponse {
         return mHttpClient.get(MviAppConstants.NEWS_BASE_URL) {
             url {
-                path("top-headlines")
+                path("v2/top-headlines")
                 parameter("sources", source)
                 parameter("apiKey", apiKey)
             }

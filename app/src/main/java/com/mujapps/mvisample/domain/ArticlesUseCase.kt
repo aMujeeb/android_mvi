@@ -13,7 +13,6 @@ class ArticlesUseCase(private val artRepo: ArticlesRepository) {
 
     suspend fun getSourceBasedArticles(source: String): Flow<ApiResource<List<DisplayNewsArticle>>> = flow {
         try {
-            emit(ApiResource.Loading)
             val response = artRepo.getSourceBaseArticles(source)
             if (response.status == "ok") {
                 emit(ApiResource.Success(response.articles.map {

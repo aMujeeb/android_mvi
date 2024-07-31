@@ -10,6 +10,7 @@ import io.ktor.serialization.kotlinx.json.json
 import kotlinx.serialization.json.Json
 import org.koin.dsl.module
 import io.ktor.client.engine.okhttp.OkHttp
+import io.ktor.client.plugins.logging.SIMPLE
 import okhttp3.Interceptor
 import java.util.concurrent.TimeUnit
 
@@ -26,7 +27,7 @@ val networkModule = module {
             }
 
             install(Logging) {
-                logger = Logger.DEFAULT
+                logger = Logger.SIMPLE
                 level = LogLevel.ALL
             }
 
